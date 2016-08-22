@@ -1,30 +1,38 @@
 import React, { PropTypes  } from 'react';
+import AppBar from 'material-ui/AppBar';
 
-const propTypes = {};
+// const propTypes = {};
 
-const defaultProps = {};
+// const defaultProps = {};
 
-const Abc = () => {
-  return (
-    <span>
-      <div className="foo" />
-      <div id="abc" />
-    </span>
-  );
-};
+// / const Abc = () => {
+  // return (
+    // <span>
+      // <div className="foo" />
+      // <div id="abc" />
+    // </span>
+  // );
+// };
 
-class Foo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const AppBarExampleIcon = () => (
+  <AppBar
+    title="Title"
+    iconClassNameRight="muidocs-icon-navigation-expand-more"
+  />
+);
 
-  render() {
-    return (<Abc />);
-  }
-}
+// class Foo extends React.Component {
+  // constructor(props) {
+    // super(props);
+  // }
 
-Foo.propTypes = propTypes;
-Foo.defaultProps = defaultProps;
+  // render() {
+    // return (<Abc />);
+  // }
+// }
 
-export default Foo;
+// Foo.propTypes = propTypes;
+// Foo.defaultProps = defaultProps;
+
+export default AppBarExampleIcon;
 
