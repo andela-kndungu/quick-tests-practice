@@ -11,7 +11,10 @@ class Foo extends React.Component {
 
   render() {
     return (
-      <div className="foo" />
+      <span>
+        <div className="foo" />
+        <div id="abc" />
+      </span>
     );
   }
 }

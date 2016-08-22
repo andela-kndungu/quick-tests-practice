@@ -6,6 +6,9 @@ import Foo from '../app/components/Foo.jsx';
 describe('A suite', () => {
   const wrapper = shallow(<Foo />);
   it('contains spec with an expectation', () => {
-    expect(wrapper.find('div')).to.have.className('foo');
+    expect(wrapper.find('span')).to.have.descendants('.foo');
+  });
+  it('finds nested divs', () => {
+    expect(wrapper.find('span')).to.have.descendants('#abc');
   });
 });
