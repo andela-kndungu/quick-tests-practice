@@ -3,16 +3,9 @@ import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
 import Foo from '../app/components/Foo.jsx';
 
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    expect(shallow(<Foo />).contains(<div className="foo" />)).to.equal(true);
-  });
-
-  it("contains spec with an expectation", function() {
-    expect(shallow(<Foo />).is('.foo')).to.equal(true);
-  });
-
-  it("contains spec with an expectation", function() {
-    expect(mount(<Foo />).find('.foo').length).to.equal(1);
+describe('A suite', () => {
+  const wrapper = shallow(<Foo />);
+  it('contains spec with an expectation', () => {
+    expect(wrapper.find('div')).to.have.className('foo');
   });
 });

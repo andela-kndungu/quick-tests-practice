@@ -1,8 +1,10 @@
 require('babel-register')();
 
-var jsdom = require('jsdom').jsdom;
+import chai from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { jsdom } from 'jsdom';
 
-var exposedProperties = ['window', 'navigator', 'document'];
+const exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('');
 global.window = document.defaultView;
@@ -17,4 +19,5 @@ global.navigator = {
   userAgent: 'node.js'
 };
 
-documentRef = document;
+chai.use(chaiEnzyme());
+
